@@ -1,0 +1,11 @@
+diff --git a/calc/calc.py b/calc/calc.py
+index c064e26..dd83ea9 100644
+--- a/calc/calc.py
++++ b/calc/calc.py
+@@ -3,4 +3,6 @@ def add(a, b):
+ 
+ 
+ def divide(a, b):
++    if b == 0:
++        raise ValueError("division by zero")
+     return a / b

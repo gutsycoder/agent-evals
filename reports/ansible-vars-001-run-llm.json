@@ -1,0 +1,160 @@
+{
+  "bundle": "bundles\\ansible-vars-001",
+  "task_id": "ansible-vars-001",
+  "commit": "f7234968d241d7171aadb1e873a67510753f3163",
+  "image": "evals/ansible-vars-001:f7234968d241d7171aadb1e873a67510753f3163",
+  "solver": "llm",
+  "solver_metadata": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "prompt_chars": 667118,
+    "prompt_tokens_estimate": 166779,
+    "files_inlined": 56,
+    "symbol_matched_files": 100,
+    "temperature": 0.0,
+    "thinking": "medium",
+    "token_usage": {
+      "prompt_tokens": 175716,
+      "thinking_tokens": 322,
+      "output_tokens": 331
+    },
+    "provider_retried": false,
+    "latency_seconds": 17.38,
+    "response_chars": 1086
+  },
+  "verdict": "UNSOLVED",
+  "patch_applied": true,
+  "patch_error": null,
+  "touched_protected_paths": [],
+  "diff": "diff --git a/lib/ansible/vars/manager.py b/lib/ansible/vars/manager.py\nindex 93a1b9a..d1980ba 100644\n--- a/lib/ansible/vars/manager.py\n+++ b/lib/ansible/vars/manager.py\n@@ -784,5 +784,25 @@ class VarsWithSources(MutableMapping):\n     def __contains__(self, key):\n         return self.data.__contains__(key)\n \n+    def __or__(self, other):\n+        if not isinstance(other, MutableMapping):\n+            return NotImplemented\n+        new_data = self.data.copy()\n+        new_data.update(other)\n+        return new_data\n+\n+    def __ror__(self, other):\n+        if not isinstance(other, MutableMapping):\n+            return NotImplemented\n+        new_data = dict(other)\n+        new_data.update(self.data)\n+        return new_data\n+\n+    def __ior__(self, other):\n+        if not isinstance(other, MutableMapping):\n+            return NotImplemented\n+        self.data.update(other)\n+        return self\n+\n     def copy(self):\n         return VarsWithSources.new_vars_with_sources(self.data.copy(), self.sources.copy())\n",
+  "buckets": {
+    "pass2pass": {
+      "ok": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_improper_args",
+          "name": "test_combine_vars_improper_args",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_merge",
+          "name": "test_combine_vars_merge",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append",
+          "name": "test_merge_hash_non_recursive_and_list_append",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append_rp",
+          "name": "test_merge_hash_non_recursive_and_list_append_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_keep",
+          "name": "test_merge_hash_non_recursive_and_list_keep",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend",
+          "name": "test_merge_hash_non_recursive_and_list_prepend",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend_rp",
+          "name": "test_merge_hash_non_recursive_and_list_prepend_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_replace",
+          "name": "test_merge_hash_non_recursive_and_list_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append",
+          "name": "test_merge_hash_recursive_and_list_append",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append_rp",
+          "name": "test_merge_hash_recursive_and_list_append_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_keep",
+          "name": "test_merge_hash_recursive_and_list_keep",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend",
+          "name": "test_merge_hash_recursive_and_list_prepend",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend_rp",
+          "name": "test_merge_hash_recursive_and_list_prepend_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_replace",
+          "name": "test_merge_hash_recursive_and_list_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_simple",
+          "name": "test_merge_hash_simple",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        }
+      ],
+      "missing_tests": []
+    },
+    "fail2pass": {
+      "ok": false,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_replace",
+          "name": "test_combine_vars_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "failed",
+          "message": "TypeError: unsupported operand type(s) for |: 'dict' and 'VarsWithSources'"
+        }
+      ],
+      "missing_tests": []
+    }
+  },
+  "table": "Bucket     Test                                                                                             Outcome  Expected  OK  \n---------  -----------------------------------------------------------------------------------------------  -------  --------  ----\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_improper_args                    passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_merge                            passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append      passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append_rp   passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_keep        passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend     passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend_rp  passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_replace     passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append          passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append_rp       passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_keep            passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend         passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend_rp      passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_replace         passed   passed    OK  \npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_simple                             passed   passed    OK  \nfail2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_replace                          failed   passed    FAIL\n\npass2pass: OK (15 test(s), expected passed)\nfail2pass: FAIL (1 test(s), expected passed)",
+  "source_run_id": null
+}

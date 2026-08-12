@@ -1,0 +1,12 @@
+{
+  "task_id": "vuls-redhat-001",
+  "repo": "https://github.com/future-architect/vuls.git",
+  "commit": "4c598bb9726d68b6fdef264b26fc700591b303f6",
+  "base_image": "jefzda/sweap-images:future-architect.vuls-future-architect__vuls-2c84be80b65d022c262956cd26fc79d8bb2f7010",
+  "setup_cmd": "command -v git >/dev/null 2>&1 || (apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*) && (command -v go-junit-report >/dev/null 2>&1 || go install github.com/jstemmer/go-junit-report/v2@latest)",
+  "deps_cmd": "true",
+  "test_cmd": "go test -v {dirs} 2>&1 | go-junit-report -set-exit-code > {report}",
+  "hidden_paths": [
+    "scanner/redhatbase_test.go"
+  ]
+}

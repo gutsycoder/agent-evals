@@ -1,0 +1,15 @@
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_append_rp
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_keep
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_replace
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_append
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_append_rp
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend
+test_vars.py::TestVariableUtils::test_merge_hash_simple
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_append
+test_vars.py::TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend_rp
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_prepend
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_replace
+test_vars.py::TestVariableUtils::test_combine_vars_merge
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_keep
+test_vars.py::TestVariableUtils::test_merge_hash_recursive_and_list_prepend_rp
+test_vars.py::TestVariableUtils::test_combine_vars_improper_args

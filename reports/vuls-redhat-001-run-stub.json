@@ -1,0 +1,87 @@
+{
+  "bundle": "bundles\\vuls-redhat-001",
+  "task_id": "vuls-redhat-001",
+  "commit": "4c598bb9726d68b6fdef264b26fc700591b303f6",
+  "image": "evals/vuls-redhat-001:4c598bb9726d68b6fdef264b26fc700591b303f6",
+  "solver": "stub",
+  "solver_metadata": null,
+  "verdict": "UNSOLVED",
+  "patch_applied": false,
+  "patch_error": null,
+  "touched_protected_paths": [],
+  "diff": "",
+  "buckets": {
+    "pass2pass": {
+      "ok": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/old:_package_1",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/old:_package_1",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/new:_package_1",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/new:_package_1",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/new:_package_2",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/new:_package_2",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/modularity:_package_1",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/modularity:_package_1",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/modularity:_package_2",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/modularity:_package_2",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "passed",
+          "message": null
+        }
+      ],
+      "missing_tests": []
+    },
+    "fail2pass": {
+      "ok": false,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine",
+          "name": "Test_redhatBase_parseInstalledPackagesLine",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "failed",
+          "message": "Failed"
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/epoch_in_source_package",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/epoch_in_source_package",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "failed",
+          "message": "Failed"
+        },
+        {
+          "id": "github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/invalid_source_package",
+          "name": "Test_redhatBase_parseInstalledPackagesLine/invalid_source_package",
+          "classname": "github.com/future-architect/vuls/scanner",
+          "outcome": "failed",
+          "message": "Failed"
+        }
+      ],
+      "missing_tests": []
+    }
+  },
+  "table": "Bucket     Test                                                                                                          Outcome  Expected  OK  \n---------  ------------------------------------------------------------------------------------------------------------  -------  --------  ----\npass2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/old:_package_1           passed   passed    OK  \npass2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/new:_package_1           passed   passed    OK  \npass2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/new:_package_2           passed   passed    OK  \npass2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/modularity:_package_1    passed   passed    OK  \npass2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/modularity:_package_2    passed   passed    OK  \nfail2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine                          failed   passed    FAIL\nfail2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/epoch_in_source_package  failed   passed    FAIL\nfail2pass  github.com/future-architect/vuls/scanner::Test_redhatBase_parseInstalledPackagesLine/invalid_source_package   failed   passed    FAIL\n\npass2pass: OK (5 test(s), expected passed)\nfail2pass: FAIL (3 test(s), expected passed)",
+  "source_run_id": null
+}

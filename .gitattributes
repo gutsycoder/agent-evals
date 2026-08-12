@@ -1,0 +1,13 @@
+# Everything in a bundle is consumed inside a Linux container, so line endings must
+# survive a checkout on any host. Without this, git's core.autocrlf on Windows rewrites
+# these to CRLF on clone and `git apply` inside the container rejects the patch
+# ("corrupt patch at line N") - a real failure mode this project already hit once.
+*.diff      text eol=lf
+*.patch     text eol=lf
+*.py        text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
+*.toml      text eol=lf
+Dockerfile  text eol=lf
+*.sh        text eol=lf

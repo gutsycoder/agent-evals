@@ -1,0 +1,52 @@
+{
+  "bundle": "bundles\\toy-calc-001",
+  "task_id": "toy-calc-001",
+  "commit": "6b57adb34e5ddc02699a823b7d06cff6ec122db3",
+  "image": "evals/toy-calc-001:6b57adb34e5ddc02699a823b7d06cff6ec122db3",
+  "solver": "external",
+  "solver_metadata": null,
+  "verdict": "UNSOLVED",
+  "patch_applied": true,
+  "patch_error": null,
+  "touched_protected_paths": [],
+  "diff": "",
+  "buckets": {
+    "pass2pass": {
+      "ok": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "tests.test_add::test_add_positive_numbers",
+          "name": "test_add_positive_numbers",
+          "classname": "tests.test_add",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "tests.test_add::test_add_negative_numbers",
+          "name": "test_add_negative_numbers",
+          "classname": "tests.test_add",
+          "outcome": "passed",
+          "message": null
+        }
+      ],
+      "missing_tests": []
+    },
+    "fail2pass": {
+      "ok": false,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "tests.test_divzero::test_divide_by_zero_raises_value_error",
+          "name": "test_divide_by_zero_raises_value_error",
+          "classname": "tests.test_divzero",
+          "outcome": "failed",
+          "message": "ZeroDivisionError: division by zero"
+        }
+      ],
+      "missing_tests": []
+    }
+  },
+  "table": "Bucket     Test                                                        Outcome  Expected  OK  \n---------  ----------------------------------------------------------  -------  --------  ----\npass2pass  tests.test_add::test_add_positive_numbers                   passed   passed    OK  \npass2pass  tests.test_add::test_add_negative_numbers                   passed   passed    OK  \nfail2pass  tests.test_divzero::test_divide_by_zero_raises_value_error  failed   passed    FAIL\n\npass2pass: OK (2 test(s), expected passed)\nfail2pass: FAIL (1 test(s), expected passed)",
+  "source_run_id": null
+}

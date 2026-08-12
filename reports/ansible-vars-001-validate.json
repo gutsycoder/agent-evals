@@ -1,0 +1,136 @@
+{
+  "bundle": "bundles\\ansible-vars-001",
+  "task_id": "ansible-vars-001",
+  "commit": "f7234968d241d7171aadb1e873a67510753f3163",
+  "image": "evals/ansible-vars-001:f7234968d241d7171aadb1e873a67510753f3163",
+  "status": "passed",
+  "buckets": {
+    "pass2pass": {
+      "ok": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_improper_args",
+          "name": "test_combine_vars_improper_args",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_merge",
+          "name": "test_combine_vars_merge",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append",
+          "name": "test_merge_hash_non_recursive_and_list_append",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append_rp",
+          "name": "test_merge_hash_non_recursive_and_list_append_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_keep",
+          "name": "test_merge_hash_non_recursive_and_list_keep",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend",
+          "name": "test_merge_hash_non_recursive_and_list_prepend",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend_rp",
+          "name": "test_merge_hash_non_recursive_and_list_prepend_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_replace",
+          "name": "test_merge_hash_non_recursive_and_list_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append",
+          "name": "test_merge_hash_recursive_and_list_append",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append_rp",
+          "name": "test_merge_hash_recursive_and_list_append_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_keep",
+          "name": "test_merge_hash_recursive_and_list_keep",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend",
+          "name": "test_merge_hash_recursive_and_list_prepend",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend_rp",
+          "name": "test_merge_hash_recursive_and_list_prepend_rp",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_replace",
+          "name": "test_merge_hash_recursive_and_list_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        },
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_merge_hash_simple",
+          "name": "test_merge_hash_simple",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "passed",
+          "message": null
+        }
+      ],
+      "missing_tests": []
+    },
+    "fail2pass": {
+      "ok": true,
+      "exit_code": 1,
+      "tests": [
+        {
+          "id": "test.units.utils.test_vars.TestVariableUtils::test_combine_vars_replace",
+          "name": "test_combine_vars_replace",
+          "classname": "test.units.utils.test_vars.TestVariableUtils",
+          "outcome": "failed",
+          "message": "TypeError: unsupported operand type(s) for |: 'dict' and 'VarsWithSources'"
+        }
+      ],
+      "missing_tests": []
+    }
+  },
+  "table": "Bucket     Test                                                                                             Outcome  Expected    OK\n---------  -----------------------------------------------------------------------------------------------  -------  ----------  --\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_improper_args                    passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_merge                            passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append      passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_append_rp   passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_keep        passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend     passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_prepend_rp  passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_non_recursive_and_list_replace     passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append          passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_append_rp       passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_keep            passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend         passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_prepend_rp      passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_recursive_and_list_replace         passed   passed      OK\npass2pass  test.units.utils.test_vars.TestVariableUtils::test_merge_hash_simple                             passed   passed      OK\nfail2pass  test.units.utils.test_vars.TestVariableUtils::test_combine_vars_replace                          failed   not passed  OK\n\npass2pass: OK (15 test(s), expected passed)\nfail2pass: OK (1 test(s), expected not passed)"
+}

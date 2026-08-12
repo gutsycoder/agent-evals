@@ -1,0 +1,12 @@
+{
+  "task_id": "ansible-vars-001",
+  "repo": "https://github.com/ansible/ansible.git",
+  "commit": "f7234968d241d7171aadb1e873a67510753f3163",
+  "base_image": "jefzda/sweap-images:ansible.ansible-ansible__ansible-0ea40e09d1b35bcb69ff4d9cecf3d0defa4b36e8-v30a923fb5c164d6cd18280c02422f75e611e8fb2",
+  "setup_cmd": "command -v git >/dev/null 2>&1 || (apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*) && (python -c 'import pytest' 2>/dev/null || pip install --no-cache-dir pytest)",
+  "deps_cmd": "true",
+  "test_cmd": "pytest {path} -q",
+  "hidden_paths": [
+    "test/units/utils/test_vars.py"
+  ]
+}

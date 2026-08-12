@@ -61,6 +61,26 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+# agent-evals run log. The -wal/-shm sidecars come from `PRAGMA journal_mode=WAL`
+# (so `evals history` can read while a run writes) and are pure local state.
+runs.db
+runs.db-wal
+runs.db-shm
+
+# Per-run debug artifacts from `--keep-artifacts` (solver prompts/responses, JUnit XML,
+# test logs). Keyed by run id and regenerated on every run; the committed evaluation
+# artifacts live in reports/ instead.
+artifacts/
+
+# Scratch bundles produced while verifying `evals scaffold` (README step 8 writes
+# bundles/ansible-fresh and bundles/vuls-fresh). They are byte-identical regenerations of
+# the committed bundles apart from task_id, which comes from --out - so committing them
+# would just show five bundles where there are three.
+bundles/*-fresh/
+bundles/*-test/
+reports/*-fresh-*.json
+reports/*-test-*.json
+
 # Flask stuff:
 instance/
 .webassets-cache

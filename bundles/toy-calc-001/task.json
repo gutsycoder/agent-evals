@@ -1,0 +1,8 @@
+{
+  "task_id": "toy-calc-001",
+  "repo": "https://github.com/gutsycoder/toy-calc.git",
+  "commit": "6b57adb34e5ddc02699a823b7d06cff6ec122db3",
+  "test_cmd": "pytest {path} -q",
+  "deps_cmd": "pip install -e .",
+  "hidden_paths": ["tests/test_add.py"]
+}
