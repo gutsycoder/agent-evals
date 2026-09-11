@@ -236,3 +236,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Claude Code local files. CLAUDE.md and .claude/rules/ are shared and tracked;
+# anything *.local is personal and must never be committed - settings.local.json in
+# particular records absolute paths from whichever machine approved a permission.
+CLAUDE.local.md
+CONTEXT.local.md
+.claude/settings.local.json
